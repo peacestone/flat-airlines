@@ -1,0 +1,27 @@
+<h1>Flat Airlines</h1>
+<h3>Threre is no better way to fly!</h3>
+
+<main>
+  <p>Book a flight
+    <%= form_tag(found_flights_path, method: :get) do %>
+    <div class="">
+      <%= label_tag 'from', "FROM" %><br>
+      <%= text_field_tag 'from', nil, placeholder: "City" %>
+    </div>
+    <div class="">
+      <%= label_tag 'to', "TO" %><br>
+      <%= text_field_tag 'to', nil, placeholder: "City" %>
+    </div>
+    <div class="">
+      <%= label_tag 'depart_date', "DEPART DATE" %><br>
+       <%= date_field_tag "depart_date" %>
+    </div>
+    <br>
+    <div class="">
+      <%= submit_tag "Find Flights" %>
+    </div>
+
+
+     <%end%>
+  </p>
+</main>
