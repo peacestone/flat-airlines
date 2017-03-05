@@ -10,9 +10,9 @@ pas1 = Passenger.create(email: "flat@flat.com", password: "password", name: "tom
 pas2 = Passenger.create(email: "yoyou@flat.com", password: "password", name: "alex roberts")
 pas3 = Passenger.create(email: "flat@bot.com", password: "password", name: "lyle roberts")
 
-flight1 = Flight.create(departure_city: "New York", arrival_city: "Boston", price: 405, departure_time: 408, arival_time: 807, date: 01/01/17 )
+flight1 = Flight.create(departure_city: "new york", arrival_city: "boston", price: 405, departure_time: 408, arival_time: 807, date: "2015-01-17" )
 
-flight2 = Flight.create(departure_city: "New Mexico", arrival_city: "Portland", price: 333, departure_time: 1200, arival_time: 807, date: 01/04/17 )
+flight2 = Flight.create(departure_city: "new mexico", arrival_city: "portland", price: 333, departure_time: 1200, arival_time: 807, date: "2017-04-15")
 
 pas1.flights << flight1
 pas2.flights << flight1

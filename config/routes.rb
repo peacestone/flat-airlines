@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources 'flights'
 
-  get '/findflights' => 'flights#find', as: :find_flights
+  get '/find-flights' => 'flights#find', as: :find_flights
   post '/find-flights', to: 'flights#found', as: "found_flights"
 
   post '/reservations' => 'reservations#create', as: :create_reservation
