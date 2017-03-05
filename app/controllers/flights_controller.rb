@@ -1,8 +1,12 @@
 class FlightsController < ApplicationController
 
   def find
-    @flights = Flight.query_flights(params.permit(:from, :to, :depart_date))
-    render plain: @flights.inspect
+    @query = params.permit(:from, :to, :depart_date)
+    @date = Date.parse(@query[:depart_date]).strftime("%A, %B %e %Y")
+
+    @flights = Flight.query_flights(@query)
+    
+    render 'flights'
   end
 
   def found

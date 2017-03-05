@@ -14,6 +14,12 @@ flight1 = Flight.create(departure_city: "new york", arrival_city: "boston", pric
 
 flight2 = Flight.create(departure_city: "new mexico", arrival_city: "portland", price: 333, departure_time: 1200, arival_time: 807, date: "2017-04-15")
 
+flight3 = Flight.create(departure_city: "tampa", arrival_city: "portland", price: 333, departure_time: 1200, arival_time: 807, date: "2017-04-15")
+
+flight3 = Flight.create(departure_city: "tampa", arrival_city: "portland", price: 333, departure_time: 900, arival_time: 1100, date: "2017-04-15")
+
+
+
 pas1.flights << flight1
 pas2.flights << flight1
 pas3.flights << flight2

@@ -1,0 +1,16 @@
+<h2><%="#{@query[:from]} > #{@query[:to]}"%></h2>
+<p>
+  <%= @date %>
+</p>
+<% if @flights.any? %>
+  <% @flights.each do |flight| %>
+    <div class="flight">
+      <%= "FA #{flight.id}" %>  <br>
+      <%= "#{flight.departure_time} > #{flight.arival_time}" %> <br> <br>
+      <%=number_to_currency(flight.price) %>
+    </div>
+    <br>
+    <% end %>
+  <% else %>
+  <p>There were no flights available on the given days. <%= link_to "Refine your Search", root_path %> </p>
+  <%end%>
